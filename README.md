@@ -45,10 +45,31 @@ Built for students, job-seekers, and engineers who want **realistic, role-specif
 ## 📁 Project Structure
 
 ```
-.
-├── Ai_Interview_Prep.py      # Main Streamlit app
-├── README.md                 # Documentation
-└── /resources (optional)
+ai_interview/
+│
+├── app.py                    # Main Streamlit app (thin UI layer)
+│
+├── config.py                 # Constants & defaults
+│
+├── loaders/
+│   ├── __init__.py
+│   └── file_loader.py        # PDF / DOCX / TXT extraction
+│
+├── llm/
+│   ├── __init__.py
+│   ├── prompt_builder.py     # Prompt construction
+│   └── ollama_client.py      # Ollama HTTP / CLI calls
+│
+├── tts/
+│   ├── __init__.py
+│   └── speaker.py            # TTS logic
+│
+├── interview/
+│   ├── __init__.py
+│   └── question_parser.py    # Extract first question
+│
+└── requirements.txt
+
 ```
 
 ---
